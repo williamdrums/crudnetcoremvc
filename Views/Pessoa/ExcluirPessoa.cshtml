@@ -1,0 +1,64 @@
+﻿@model CadastroPessoa.Models.Pessoa
+
+@{
+    ViewData["Title"] = "ExcluirPessoa";
+}
+
+<h2>ExcluirPessoa</h2>
+
+<h3>Voce tem certeza que deseja excluir?</h3>
+<div>
+    <h4>Pessoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.sobrenome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.sobrenome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.cpf)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.cpf)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.idade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.idade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.telefone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.telefone)
+        </dd>
+
+        <dd>
+            @Html.DisplayNameFor(model => model.localizacao)
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.localizacao)
+        </dd>
+        <dd>
+            @Html.DisplayNameFor(model => model.hobby)
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.hobby)
+        </dd>
+    </dl>
+    
+    <form asp-action="ExcluirPessoa">
+        <input type="hidden" asp-for="IdPessoa" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Voltar a Lista</a>
+    </form>
+</div>
